@@ -1,0 +1,22 @@
+(setq rules '((flu (fever cough))
+               (malaria (fever headache))))
+
+(defun diagnose (symptoms)
+  (format t "Symptoms: ~A~%" symptoms)
+  (setq found nil)
+  (dolist (rule rules)
+    (setq match t)
+    (dolist (s (second rule))
+      (when (not (member s symptoms))
+        (setq match nil)))
+    (when match
+      (format t "Diagnosis: ~A~%" (first rule))
+      (setq found t)))
+  (when (not found)
+    (format t "No diagnosis found.~%")))
+
+(diagnose '(fever cough))
+(format t "~%")
+(diagnose '(fever headache))
+(format t "~%")
+(diagnose '(cough headache))

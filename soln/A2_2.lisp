@@ -1,0 +1,20 @@
+(defun check-promotion (name performance attendance seniority)
+  (format t "~%Employee: ~A~%" name)
+  (cond
+    ((and (equal performance "high") attendance seniority)
+     (format t "Decision: Promoted~%")
+     (format t "Reason: High performance, good attendance, and senior level.~%"))
+    ((and (equal performance "high") attendance)
+     (format t "Decision: Promoted~%")
+     (format t "Reason: High performance and good attendance.~%"))
+    ((and seniority attendance)
+     (format t "Decision: Under Review~%")
+     (format t "Reason: Senior with good attendance but needs better performance.~%"))
+    (t
+     (format t "Decision: Not Promoted~%")
+     (format t "Reason: Does not meet criteria.~%"))))
+
+(check-promotion "Alice" "high" t t)
+(check-promotion "Bob" "high" t nil)
+(check-promotion "Charlie" "low" t t)
+(check-promotion "Dave" "low" nil nil)

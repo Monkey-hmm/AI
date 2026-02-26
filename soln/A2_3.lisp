@@ -1,0 +1,11 @@
+(defun check-loan (name salary credit)
+  (format t "~%Applicant: ~A~%" name)
+  (format t "  High salary? ~A~%" (if (equal salary "high") "YES" "NO"))
+  (format t "  Good credit? ~A~%" (if (equal credit "good") "YES" "NO"))
+  (if (and (equal salary "high") (equal credit "good"))
+      (format t "  Result: Loan APPROVED~%")
+      (format t "  Result: Loan DENIED~%")))
+
+(check-loan "Alice" "high" "good")
+(check-loan "Bob" "high" "bad")
+(check-loan "Charlie" "low" "good")

@@ -1,0 +1,21 @@
+Assignment 1
+============
+A1_1.lisp - Student Performance Analysis (Lists, Functions, Conditionals, Formatted Output)
+A1_2.lisp - Gross Salary Calculation (Conditionals, Arithmetic, User Input)
+A1_3.lisp - Password Validation (String Processing, Predicates, Higher-Order Functions)
+A1_4.lisp - List Operations (Lists, Random Numbers, Higher-Order Functions, Lambda)
+A1_5.lisp - Dictionary Lookup (Association Lists, User Input)
+A1_6.lisp - 3D Array Operations (Multi-Dimensional Arrays, Element-wise Operations, Statistics)
+A1_7.lisp - Library Management System (Property Lists, Global Variables, String Matching)
+A1_8.lisp - 5x5 Array Median Replacement (2D Arrays, Sorting, Median Computation)
+A1_9.lisp - Classes and Objects (Structures via defstruct, Constructors, Accessors)
+
+Assignment 2&3
+==============
+A2_1.lisp - Medical Diagnosis Expert System (Forward Chaining, Rule-Based System)
+A2_2.lisp - Employee Promotion with Explanation (Rule-Based Expert System, Explanation Facility)
+A2_3.lisp - Loan Approval System (Backward Chaining Inference)
+A2_4.lisp - Traffic Signal Decision System (Predicate Logic)
+A2_5.lisp - Multi-Disease Diagnosis (Forward Chaining, Priority-Based Conflict Resolution)
+A2_6.lisp - Smart Traffic Control System (Predicate Logic, Multiple Conditions)
+A2_7.lisp - Fault Diagnosis System (Resolution Refutation, Propositional Logic)

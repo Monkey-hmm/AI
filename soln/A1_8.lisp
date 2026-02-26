@@ -1,0 +1,30 @@
+(setq arr (make-array '(5 5)))
+(dotimes (i 5)
+  (dotimes (j 5)
+    (setf (aref arr i j) (1+ (random 50)))))
+
+(defun print-mat (a)
+  (dotimes (i 5)
+    (dotimes (j 5)
+      (format t "~5D" (aref a i j)))
+    (format t "~%")))
+
+(format t "Original:~%")
+(print-mat arr)
+
+(setq result (make-array '(5 5)))
+(dotimes (i 5)
+  (dotimes (j 5)
+    (setf (aref result i j) (aref arr i j))))
+
+(dotimes (i 3)
+  (dotimes (j 3)
+    (setq elems nil)
+    (dotimes (di 3)
+      (dotimes (dj 3)
+        (push (aref arr (+ i di) (+ j dj)) elems)))
+    (setq elems (sort elems #'<))
+    (setf (aref result (+ i 1) (+ j 1)) (nth 4 elems))))
+
+(format t "~%After median replacement:~%")
+(print-mat result)
