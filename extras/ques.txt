@@ -1,0 +1,72 @@
+--- General (E1-E3) ---
+
+E1. Factorial and Fibonacci
+Compute factorial and fibonacci of a number using recursion.
+
+E2. Temperature Converter
+Convert temperature between Celsius, Fahrenheit, and Kelvin.
+
+E3. Simple Calculator
+Take two numbers and an operator, perform the operation.
+
+--- AI-Focused (E4-E23) ---
+
+E4. Food Recommendation Expert System (Forward Chaining)
+IF vegetarian AND likes-spicy -> "Paneer Tikka"; IF non-veg AND likes-mild -> "Butter Chicken"; etc.
+
+E5. Fire Alarm Expert System (Predicate Logic)
+IF smoke-detected AND high-temperature -> "Fire Alert"; IF smoke-detected AND NOT high-temperature -> "Smoke Warning".
+
+E6. Crop Selection Expert System (Forward Chaining)
+IF soil=clay AND season=monsoon -> Rice; IF soil=sandy AND season=summer -> Watermelon; etc.
+
+E7. Student Scholarship Eligibility (Backward Chaining)
+Scholarship IF GPA > 3.5 AND attendance > 90%. Backward chain from goal to verify conditions.
+
+E8. Sentiment Analyzer (Rule-Based)
+Classify text sentiment as positive/negative/neutral based on keyword matching rules.
+
+E9. Car Diagnosis Expert System (Forward Chaining)
+IF engine-noise AND overheating -> "Radiator issue"; IF engine-noise AND vibration -> "Engine mount problem"; etc.
+
+E10. Flight Booking Advisor (Predicate Logic)
+IF budget<5000 AND domestic -> "Economy"; IF budget>20000 AND international -> "Business class"; etc.
+
+E11. Propositional Logic Evaluator
+Evaluate propositional logic expressions with AND, OR, NOT given truth values of variables.
+
+E12. Modus Ponens Inference Engine
+Given facts and IF-THEN rules, apply modus ponens repeatedly to derive new facts.
+
+E13. Disease Risk Assessment (Forward Chaining with Certainty Factors)
+Assign certainty factors to rules. IF smoking AND family-history -> Heart Disease (CF=0.8).
+
+E14. Home Automation Expert System (Predicate Logic)
+IF night AND motion-detected -> lights-on; IF day AND no-motion -> lights-off; IF temp>30 -> AC-on.
+
+E15. Unification Algorithm
+Implement simple unification for two predicate logic terms (e.g., P(x,a) and P(b,a) -> {x/b}).
+
+E16. Admission Eligibility Expert System (Backward Chaining)
+Admit IF (marks>80 AND entrance-passed) OR (sports-quota AND marks>60). Trace backward from goal.
+
+E17. Conflict Resolution Strategies Demo
+Given multiple matching rules, demonstrate: first-match, priority-based, and most-specific-match strategies.
+
+E18. Chatbot with Rule-Based Responses
+Pattern-match user input against rules: "hello" -> greeting, "bye" -> farewell, "weather" -> weather info.
+
+E19. Syllogism Validator (Predicate Logic)
+Validate syllogisms: "All men are mortal", "Socrates is a man" => "Socrates is mortal".
+
+E20. Network Fault Diagnosis (Resolution Refutation)
+Clauses: (NOT router-up OR network-ok), (router-up), (NOT network-ok OR internet-works). Prove internet-works.
+
+E21. Restaurant Recommender (Forward Chaining + Conflict Resolution)
+Multiple rules for cuisine, budget, rating. Use priority to pick best match.
+
+E22. Water Quality Expert System (Predicate Logic)
+IF pH<6.5 -> acidic-warning; IF pH>8.5 -> alkaline-warning; IF turbidity>5 -> unsafe.
+
+E23. Theorem Prover using Resolution
+Given set of clauses, prove a goal by adding negation and resolving to empty clause.
