@@ -1,0 +1,22 @@
+(defun c-to-f (c) (+ (* c 9/5) 32))
+(defun c-to-k (c) (+ c 273.15))
+(defun f-to-c (f) (* (- f 32) 5/9))
+(defun k-to-c (k) (- k 273.15))
+
+(format t "Enter temperature: ")
+(finish-output)
+(setq temp (read))
+(format t "Enter unit (C/F/K): ")
+(finish-output)
+(setq unit (read))
+
+(cond
+  ((equal unit 'C)
+   (format t "~A C = ~,2F F = ~,2F K~%" temp (c-to-f temp) (c-to-k temp)))
+  ((equal unit 'F)
+   (let ((c (f-to-c temp)))
+     (format t "~A F = ~,2F C = ~,2F K~%" temp c (c-to-k c))))
+  ((equal unit 'K)
+   (let ((c (k-to-c temp)))
+     (format t "~A K = ~,2F C = ~,2F F~%" temp c (c-to-f c))))
+  (t (format t "Unknown unit.~%")))

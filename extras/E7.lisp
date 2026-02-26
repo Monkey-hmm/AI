@@ -1,0 +1,12 @@
+(defun check-scholarship (name gpa attendance)
+  (format t "~%Student: ~A~%" name)
+  (format t "Goal: Scholarship Eligibility~%")
+  (format t "  Checking GPA > 3.5 ... ~A (GPA=~A)~%" (if (> gpa 3.5) "YES" "NO") gpa)
+  (format t "  Checking Attendance > 90 ... ~A (~A%)~%" (if (> attendance 90) "YES" "NO") attendance)
+  (if (and (> gpa 3.5) (> attendance 90))
+      (format t "  Result: ELIGIBLE for scholarship~%")
+      (format t "  Result: NOT eligible~%")))
+
+(check-scholarship "Alice" 3.8 95)
+(check-scholarship "Bob" 3.2 92)
+(check-scholarship "Charlie" 3.9 85)

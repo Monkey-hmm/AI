@@ -1,0 +1,37 @@
+(setq rules '((rule1 5 (fever cough fatigue))
+               (rule2 3 (fever cough))
+               (rule3 4 (fever headache))
+               (rule4 1 (cough))))
+
+(setq symptoms '(fever cough fatigue))
+
+(defun matches (rule-syms patient)
+  (let ((count 0))
+    (dolist (s rule-syms) (when (member s patient) (incf count)))
+    count))
+
+(format t "Symptoms: ~A~%~%" symptoms)
+
+(format t "Strategy 1: First Match~%")
+(dolist (rule rules)
+  (when (= (matches (third rule) symptoms) (length (third rule)))
+    (format t "  Fired: ~A~%" (first rule))
+    (return)))
+
+(format t "~%Strategy 2: Priority Based~%")
+(let ((best nil) (best-pri -1))
+  (dolist (rule rules)
+    (when (and (= (matches (third rule) symptoms) (length (third rule)))
+               (> (second rule) best-pri))
+      (setq best (first rule))
+      (setq best-pri (second rule))))
+  (format t "  Fired: ~A (priority ~A)~%" best best-pri))
+
+(format t "~%Strategy 3: Most Specific~%")
+(let ((best nil) (best-len 0))
+  (dolist (rule rules)
+    (when (and (= (matches (third rule) symptoms) (length (third rule)))
+               (> (length (third rule)) best-len))
+      (setq best (first rule))
+      (setq best-len (length (third rule)))))
+  (format t "  Fired: ~A (~A conditions)~%" best best-len))

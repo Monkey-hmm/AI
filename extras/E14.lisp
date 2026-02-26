@@ -1,0 +1,17 @@
+(defun home-auto (time-of-day motion temp)
+  (format t "Time: ~A, Motion: ~A, Temp: ~A~%" time-of-day (if motion "YES" "NO") temp)
+  (cond
+    ((and (equal time-of-day 'night) motion)
+     (format t "  -> Lights ON~%"))
+    ((and (equal time-of-day 'day) (not motion))
+     (format t "  -> Lights OFF~%"))
+    (t (format t "  -> Lights: no change~%")))
+  (if (> temp 30)
+      (format t "  -> AC ON~%")
+      (format t "  -> AC OFF~%")))
+
+(home-auto 'night t 35)
+(format t "~%")
+(home-auto 'day nil 22)
+(format t "~%")
+(home-auto 'night nil 32)
